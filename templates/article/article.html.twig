@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	-
+{% endblock %}
+
+{% block body %}
+
+	{# {{ dump(article) }} #}
+
+	<div class="card w-75">
+		<div class="card-body">
+			<h5 class="card-title">{{ article.title }}</h5>
+			<h6 class="card-title">{{ article.date.date|date('d/m/Y') }}</h6>
+			<p class="card-text">
+				{{ article.author }}
+			</p>
+			<a href=" " class="btn btn-primary">Article</a>
+		</div>
+	</div>
+{% endblock %}
